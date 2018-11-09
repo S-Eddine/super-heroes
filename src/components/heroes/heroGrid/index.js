@@ -25,12 +25,14 @@ const styles = theme => ({
     },
   });
 
-const handlInfoClick = () => {
-  console.log("handlInfoClick");
-}
+
 
 function Hero(props) {
-    const { classes, heroes } = props;
+    const { classes, heroes, history } = props;
+
+    const handlInfoClick = (id) => () => {
+      history.push(`/hero/${id}`);
+    }
 
     return (
       <div className={classes.root}>
@@ -42,7 +44,7 @@ function Hero(props) {
                 title={hero.name}
                 actionIcon={
                   <IconButton className={classes.icon}>
-                    <InfoIcon onClick={handlInfoClick}/>
+                    <InfoIcon onClick={handlInfoClick(hero.id)}/>
                   </IconButton>
                 }
               />
@@ -59,6 +61,7 @@ function Hero(props) {
   Hero.propTypes = {
     classes: PropTypes.object.isRequired,
     heroes: PropTypes.array.isRequired,
+    history: PropTypes.object,
   };
   
   export default withStyles(styles)(Hero);

@@ -16,7 +16,7 @@ class Heroes extends Component {
         if(this.props.heroes.length > 0){
             return (
                 <div>
-                    <Hero heroes={this.props.heroes[0]}/>
+                    <Hero heroes={this.props.heroes[0]}  history = {this.props.history}/>
                 </div>
             );
         }

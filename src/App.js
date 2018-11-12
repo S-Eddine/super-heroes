@@ -9,7 +9,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 class App extends Component {
   render() {
-    console.log("this ", this.props);
     return (
       <Provider store={store}>
       <div className="App">

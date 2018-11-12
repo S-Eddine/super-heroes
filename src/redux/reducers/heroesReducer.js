@@ -5,7 +5,6 @@ export default function heroesReducer(state = [], action){
         
         case FETCH_HEROES_SUCESS:
             console.log("FETCH_HEROES_SUCESS !");
-            console.log("action  ",action.heroes);
             return [...state, action.heroes];
         
         case FETCH_HEROES_ERROR: 

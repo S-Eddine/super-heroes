@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component}  from 'react';
 import { Link } from 'react-router-dom';
-import { fectchHero } from '../../redux/actions/heroAction';
+import { fetchHero } from '../../redux/actions/heroAction';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import Loading from '../../utils/loading/index';
@@ -10,7 +10,7 @@ class HeroId extends Component {
 
     componentDidMount() {
         console.log("in componentDidMount")
-        this.props.actions.fectchHero(this.props.match.params.heroId);
+        this.props.actions.fetchHero(this.props.match.params.heroId);
     }
 
     render() {
@@ -39,7 +39,7 @@ function mapDispatchToProps(dispatch) {
     return {
         actions: bindActionCreators(
             {
-                fectchHero,
+                fetchHero,
             },
             dispatch
           )

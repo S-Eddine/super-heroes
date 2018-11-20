@@ -20,6 +20,5 @@ describe('heroCard', () => {
     }
     const wrapper = shallow(<HeroCard heroId={heroId} />);
     expect(wrapper).toMatchSnapshot();
-    // On the first run of this test, Jest will generate a snapshot file automatically.
   });
 });

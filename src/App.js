@@ -13,7 +13,7 @@ class App extends Component {
       <Provider store={store}>
       <div className="App">
         <header className="App-header">
-          SUPER HEROES - Vente privee
+          SUPER HEROES
         </header>
         <BrowserRouter>
           <Switch>
